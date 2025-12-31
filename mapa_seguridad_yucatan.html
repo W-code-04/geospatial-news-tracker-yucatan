@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c8f40b41f96f2f45709d4a2715c43567 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c8f40b41f96f2f45709d4a2715c43567" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c8f40b41f96f2f45709d4a2715c43567 = L.map(
+                "map_c8f40b41f96f2f45709d4a2715c43567",
+                {
+                    center: [20.967, -89.623],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9ba78d4fd6584784a7adc8e7ac53f46e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9ba78d4fd6584784a7adc8e7ac53f46e.addTo(map_c8f40b41f96f2f45709d4a2715c43567);
+        
+    
+            var marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_da9fccafb6a9db5e7b0292f1f774db3a = L.marker(
+                [20.969333643135787, -89.62090984645178],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_3a5841bef2609f1a1a68e5704a0071bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a177aeaf37b9891a4d824479f8fe3f6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2be69350cd7f6b373a02d4e88ce9172c = $(`<div id="html_2be69350cd7f6b373a02d4e88ce9172c" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Tragedia en la Mérida-Umán: hombre muere al instante tras impactar su auto - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiwgFBVV95cUxNazVUbUdLaTlfVnNiWXJnTS1PTDJVaTc0ZkhuUEZheUdKWVh3ZWVNZDRLTU1acW9YVldDWTFOLXZCSmtPVk5hZXNpSDZkVWZscDczUjF4cURSRWQ4WTJmYkZHQmxiQTd1eEFpeGxEOXZUaDZQTUpVdHZVbVV0Q0J4dndGUFp3TUJUWDVwUFBHcG1EYXZ6cW1iZUxpMFVFVGxXMDV2ZWJxNjRHUUNyRG5SZ1JDX0I1cm1nNjUwQXlZWmtVUQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_a177aeaf37b9891a4d824479f8fe3f6e.setContent(html_2be69350cd7f6b373a02d4e88ce9172c);
+            
+        
+
+        marker_da9fccafb6a9db5e7b0292f1f774db3a.bindPopup(popup_a177aeaf37b9891a4d824479f8fe3f6e)
+        ;
+
+        
+    
+    
+                marker_da9fccafb6a9db5e7b0292f1f774db3a.setIcon(icon_3a5841bef2609f1a1a68e5704a0071bb);
+            
+    
+            var marker_dc075a8b75e824d72e73dbb6df0eca44 = L.marker(
+                [20.97090546723127, -89.62792705901775],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_6f21b10b38840e2cec3eda717b74e3ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4d517fb2c8c3912db1cf96367265a52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1b182da72a5c352dfabdeed8e110970 = $(`<div id="html_a1b182da72a5c352dfabdeed8e110970" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Mérida Archives - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiU0FVX3lxTE41LWM4cGVmMlI5TDMwY2NOYVpkd1pPOXFaNmxnb1VjTUhvWWZzR3gyM212TllTUXBXZHk5Q3NUV2R2NWpSOHlhbFg4NVpwZHFlR1k4?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_d4d517fb2c8c3912db1cf96367265a52.setContent(html_a1b182da72a5c352dfabdeed8e110970);
+            
+        
+
+        marker_dc075a8b75e824d72e73dbb6df0eca44.bindPopup(popup_d4d517fb2c8c3912db1cf96367265a52)
+        ;
+
+        
+    
+    
+                marker_dc075a8b75e824d72e73dbb6df0eca44.setIcon(icon_6f21b10b38840e2cec3eda717b74e3ae);
+            
+    
+            var marker_7e3accc6be6841327122ca966d2e8d09 = L.marker(
+                [21.24512613949652, -87.87495446989622],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_40cb3487deeef6e1bf77815d6c1aa2e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4daabf5ef986f06f7c162d75e1cc9180 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38d878d199dd495ee11784c0efc34589 = $(`<div id="html_38d878d199dd495ee11784c0efc34589" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Sube tarifa de taxi en Tizimín por inicio de la Expo Feria 2026; estos son los nuevos precios - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi2wFBVV95cUxNa2NWYjZNU2JQYUphMmRXc0ViSnZoU3RzbldqVVZFT3JOVGFoSzh5bS1wNE5rREg2X0dqMGF0czlNcjVmRjBzVnBDaDlqa3ZIM2RxNlVOYk0wejBWZW1vQWpIcDIzVWhLc2YtaU5MRDBkbVAzdkZvYnhWZXdOSG1Jdk54cllHMHd2NjM4N1phcVRmWW8wWHVkLUZRN3BrTUtzQVdveWlHNzZoTUg0dDJyWnZkbVdSdUdaNHdJQ0JnR0lIU09NR0FkWm5PMUtOUU45cERpdVdyWnYzWGM?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_4daabf5ef986f06f7c162d75e1cc9180.setContent(html_38d878d199dd495ee11784c0efc34589);
+            
+        
+
+        marker_7e3accc6be6841327122ca966d2e8d09.bindPopup(popup_4daabf5ef986f06f7c162d75e1cc9180)
+        ;
+
+        
+    
+    
+                marker_7e3accc6be6841327122ca966d2e8d09.setIcon(icon_40cb3487deeef6e1bf77815d6c1aa2e4);
+            
+    
+            var marker_bf0300d696bc4bd0f0ccd6b1b62b9b8b = L.marker(
+                [20.962245347473914, -89.62769624895839],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_dad86010a5fb87966310b2c8de360302 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82e1c4f5b098f07233dbf8daf73a8bfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0516976db0524c23cce1afdcb0ae66f = $(`<div id="html_c0516976db0524c23cce1afdcb0ae66f" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Choque por alcance en el Periférico de Mérida deja dos lesionados - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMivwFBVV95cUxNaGpXS3dKS0ZlaXlMMjBHbjlMTVFfNTFRREo3ZnltOUVYTFFsVWpvZWJnM2Nobnp0SGdHalB2aEdxeC1RanlBVlFCY082VlVWZTV6RHpSR0p2N3o5LWR5RFhWekFYSmN5TWlwOW5fVEtuUUlxb0lWUzZCeTR3cURyQVRzcDl4T3EwcUJ1T3BJNE52NG5PQ0UwUVBPMlFBenBuQ25VQzVEeklUOGxjMVRybXVGY0hVeUxjblloQlNWZw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_82e1c4f5b098f07233dbf8daf73a8bfa.setContent(html_c0516976db0524c23cce1afdcb0ae66f);
+            
+        
+
+        marker_bf0300d696bc4bd0f0ccd6b1b62b9b8b.bindPopup(popup_82e1c4f5b098f07233dbf8daf73a8bfa)
+        ;
+
+        
+    
+    
+                marker_bf0300d696bc4bd0f0ccd6b1b62b9b8b.setIcon(icon_dad86010a5fb87966310b2c8de360302);
+            
+    
+            var marker_3de3c8b8a47fff9339489da9f1eaeb35 = L.marker(
+                [20.971656188586742, -89.62735277436363],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_573a6ffeae4bfefe1d25f16e7898e3aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35d8dbf012d8c60c3230406f4f38a5ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94c1012aac012923ecbab3f8ae151c00 = $(`<div id="html_94c1012aac012923ecbab3f8ae151c00" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Fuerte choque en el centro de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMijwFBVV95cUxQbGNrckl3ZEJxaldMTW1xMXpCSUhDWXVvUVFKcFdrNDdock5MT3VSbHRhOWx0VUNLLV9fTTZ2YzJ6anU3WDNFeXNuY0VYczJmWENYVDRlUHRERXFoSDlPMkJXTG1oLXE5b01DSVlqSmJyRTRYbGNKemVUbU1nWnh1V2FxeHZmNmdwM3dxTjZtUQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_35d8dbf012d8c60c3230406f4f38a5ec.setContent(html_94c1012aac012923ecbab3f8ae151c00);
+            
+        
+
+        marker_3de3c8b8a47fff9339489da9f1eaeb35.bindPopup(popup_35d8dbf012d8c60c3230406f4f38a5ec)
+        ;
+
+        
+    
+    
+                marker_3de3c8b8a47fff9339489da9f1eaeb35.setIcon(icon_573a6ffeae4bfefe1d25f16e7898e3aa);
+            
+    
+            var marker_34c15575a3e48d78bb29841b726ba733 = L.marker(
+                [20.97100611977831, -89.62268121894166],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_71219c65c18b0c773411a89376f59c2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36a18db8d080206c7df17c3e6006fb26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_817f3f5683b849acb332cb4af1981ac6 = $(`<div id="html_817f3f5683b849acb332cb4af1981ac6" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Fallos en cadena de semáforos en calles del centro de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiuAFBVV95cUxPT3gyZVZUOTZNVTJTSk9PTVlPdlJpTGEtOW5rN3BoR1pONXI3Rm9VNjJLRmNWUzkzMk5qTmJXNWFuenBSSnZLTk5tX05pXzBYMjU2b3RkbV9FOWVLUERQSnlORkhjY1ZCWmdaMzFPMXpSdXFpdlZ3TG5rS2I3S00wd3cyTFphMmkzNlQydkd4ejNLQ3Jkd0J1MEFSRmdRSWE1LTh5XzduMGhQeFh4dEYzU21iTkRJeF9I?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_36a18db8d080206c7df17c3e6006fb26.setContent(html_817f3f5683b849acb332cb4af1981ac6);
+            
+        
+
+        marker_34c15575a3e48d78bb29841b726ba733.bindPopup(popup_36a18db8d080206c7df17c3e6006fb26)
+        ;
+
+        
+    
+    
+                marker_34c15575a3e48d78bb29841b726ba733.setIcon(icon_71219c65c18b0c773411a89376f59c2a);
+            
+    
+            var marker_215dcc29eedfb06abc4071d4c732eb23 = L.marker(
+                [20.97184878731549, -89.62497670785407],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_e0bfaba25fc54f037559c4d462e92745 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c4efa886814021bb5ae463ecf16c62b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82ffbf5632afd47b797f0efcc6969629 = $(`<div id="html_82ffbf5632afd47b797f0efcc6969629" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Exigen acciones y justicia ante la creciente ola de violencia vial en Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMixAFBVV95cUxQa2c2RFFsdFRSdjBMTVBQUThXNGRqUVJnRUJLdzVCRXc0eXNSZzhWdDdPbTd4MFY5SS0ydWIzT21iOXBrT1hBcFZDLWVfRi0zR21XZlJJUFk1ektpZjAwR053QW5HeDJEMHBKeWJrVGh6UjR4d2NPMzdDTU1PN2Z0MmpuX1BDZVUxODFHYkhIMHJ4ZV9XVGtnV2FMX3BhaUlSSkdZdVFuTE1WTlZvbVVTdVdVcU5oRjZHb1VtbjZqdzM3ZjAz?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_2c4efa886814021bb5ae463ecf16c62b.setContent(html_82ffbf5632afd47b797f0efcc6969629);
+            
+        
+
+        marker_215dcc29eedfb06abc4071d4c732eb23.bindPopup(popup_2c4efa886814021bb5ae463ecf16c62b)
+        ;
+
+        
+    
+    
+                marker_215dcc29eedfb06abc4071d4c732eb23.setIcon(icon_e0bfaba25fc54f037559c4d462e92745);
+            
+    
+            var marker_9679aa46ec1a66c924d193842b468c44 = L.marker(
+                [20.964762649358338, -89.62696282236233],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_b8715251e319debfb50596615d048e2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02154753e075d9a0941c38f317fb7611 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7067131214c2321f9e552e2f4b68547 = $(`<div id="html_e7067131214c2321f9e552e2f4b68547" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Primeros auxilios en Mérida: anuncian capacitación masiva en restaurantes, hoteles y más servicios - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi5gFBVV95cUxPeGhXOUd6MXVXUThFZ25oQzhLLXc3X2tCNjFaVEJVckg5Y2pPaWFmLTFDTG1zSGhGUXdNS29TWnhDdXBCNFZyTVBZRVhJcFNwNUw3dFVNWHV6eVMwdzcxanB6cC1Fa3Z0ZFdKbGRsbUgtZHpUZ1pjR0QyaEhKTkVpM0VMdTBGTmh3eWJtaGdtbzdJd1luVnBWUDJRTEpQcUdGWGItanQwOGxRdlFkODF3OVpuNGpGMTVRem0zQTlKUmw1dlgyVUpXX2I2WkF5WXhpSFRsTV9RTGZ6NEN2SmpmUHVlVHg0UQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_02154753e075d9a0941c38f317fb7611.setContent(html_e7067131214c2321f9e552e2f4b68547);
+            
+        
+
+        marker_9679aa46ec1a66c924d193842b468c44.bindPopup(popup_02154753e075d9a0941c38f317fb7611)
+        ;
+
+        
+    
+    
+                marker_9679aa46ec1a66c924d193842b468c44.setIcon(icon_b8715251e319debfb50596615d048e2f);
+            
+    
+            var marker_a4ce4953a3e790e329487019b78da7bf = L.marker(
+                [20.962308265073922, -89.62502546456369],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ff8826ec030483df84bd0f0984996f74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c7d74590ecdd31b18d601560a91a3ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_273308269b45f10b9f49a739eec38645 = $(`<div id="html_273308269b45f10b9f49a739eec38645" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Cecilia Patrón comparte su visión de Mérida y plan de trabajo - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMisAFBVV95cUxPSHBidWI2R19MRG5ZWVdWUjZ2MXdYa1pYcU5QZGphd3NBVi1uU3Y5VEhsWHd0aHkzYk5RTERkcWNLS2ZFdHJ4b0RpaEhOYWI0bXZfa2tFNUZQYVAxMjBKT3VhbUpIVnVyM0NBSmJZNUwySTRaV2pFLVVJc0M5bUxfN1pyMEFTX2VGUGVyV1c4RVhVdGxiaWxmMGJ0bi14ZjBXSUFSNHBFU2laRXZvS2w1QQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_4c7d74590ecdd31b18d601560a91a3ed.setContent(html_273308269b45f10b9f49a739eec38645);
+            
+        
+
+        marker_a4ce4953a3e790e329487019b78da7bf.bindPopup(popup_4c7d74590ecdd31b18d601560a91a3ed)
+        ;
+
+        
+    
+    
+                marker_a4ce4953a3e790e329487019b78da7bf.setIcon(icon_ff8826ec030483df84bd0f0984996f74);
+            
+    
+            var marker_53630d761f89686448d6fd238552b0ce = L.marker(
+                [20.964114531336143, -89.62169862923496],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_55affaef98b47464dedad9a4cc946508 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79bce458ff051a39d3a1b96b89410e9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7166af50e10c48cf6e3482d040d9251b = $(`<div id="html_7166af50e10c48cf6e3482d040d9251b" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Se consolida con nuevas oficinas en Mérida Totalplay - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxOcTk3Tnk3VlZzd2poMmF3UlFJVkVCRlRKSzZTaG9nQUFDV252ZnRaREJPREFUVzRMeXIwcHpicjJIR0xZVm90STV1WERjR1VlM2F1QnJ6cVliWjFYa01VNDUxUDJFRW1NelE0RmpwY3FMVlZENkd5SE9oZlduNEZLVWloNTZ3aE9Oa05EaWwzdXg1NFcwOUpYZnZTZ2RSMTdIRnItdERzLVp1c0Jjdnc?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_79bce458ff051a39d3a1b96b89410e9d.setContent(html_7166af50e10c48cf6e3482d040d9251b);
+            
+        
+
+        marker_53630d761f89686448d6fd238552b0ce.bindPopup(popup_79bce458ff051a39d3a1b96b89410e9d)
+        ;
+
+        
+    
+    
+                marker_53630d761f89686448d6fd238552b0ce.setIcon(icon_55affaef98b47464dedad9a4cc946508);
+            
+    
+            var marker_4962e518db0e33a19448f4c21ee43653 = L.marker(
+                [20.969493293604934, -89.62467278111639],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_30a0c214a7117a872f827227dabdd327 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9050ef31e3ea7b33473abb6121b2ab8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f553aad23aa93f0bf6deb65f0ad1904 = $(`<div id="html_5f553aad23aa93f0bf6deb65f0ad1904" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Regreso a Clase 2025: operativo vial en escuelas del centro de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiugFBVV95cUxQdmZxTlU1cnY5OGNwY2VxWnk0MHlISExDN2JMRjB4SVVDVDVSR01xMzVNT3ZVLVdpeXJ1YlBQc2RxWUt1dDdMQnZLNjNubHl0SFllUXlqcGZfZXpkTVhseDdubEk0MGtIcjRnTzBhdkxHdFo1T1VZejBoOHBfMmhsVzJyZDk5SDhEcXd4eExpZldvTkFJMFhIejREYmV6emNxcWNyU3J0MHNSOUM4cmxRd1hPbGhQa0ZDaGc?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_9050ef31e3ea7b33473abb6121b2ab8f.setContent(html_5f553aad23aa93f0bf6deb65f0ad1904);
+            
+        
+
+        marker_4962e518db0e33a19448f4c21ee43653.bindPopup(popup_9050ef31e3ea7b33473abb6121b2ab8f)
+        ;
+
+        
+    
+    
+                marker_4962e518db0e33a19448f4c21ee43653.setIcon(icon_30a0c214a7117a872f827227dabdd327);
+            
+    
+            var marker_4c8ee705a49f2dcea6c1d53f0d73dbed = L.marker(
+                [20.965728881425026, -89.61880657214292],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_8cb2bc6bf8bbd19714939f1a655a8813 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c747d379301ab76849f76000ae3a98d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c1154c88a666ef42ff3863b6da0eafe = $(`<div id="html_7c1154c88a666ef42ff3863b6da0eafe" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Segundo accidente en días consecutivos en conflictivo cruce de la colonia Sambulá, Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi1AFBVV95cUxQRnVDVWxsOUZVLUhaQ2s2Qzh1Yy1sRFFNZDMyWTladU03Uk5ULUdMQjhOZEc5Vm03dU96WWhqN19oYTI2MGhzVXZTVFpFdmhqaFlIcXVicDI4Z1lEYzhlTkpZOGhvQTVHRnBBWTJGZW1fektCbUtNOEM1MWFQVGhBS2EtRGpYR1d1VVItdHZ3Tnoxa2d6YzFjSFh5blMtRThrX1U0Tlk4UUxmRUxkTGQxZTVWaGtFVnNUUHhyOUw0QlRhRUVfYWpmVnlua3FJVnM4SmFOUw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_0c747d379301ab76849f76000ae3a98d.setContent(html_7c1154c88a666ef42ff3863b6da0eafe);
+            
+        
+
+        marker_4c8ee705a49f2dcea6c1d53f0d73dbed.bindPopup(popup_0c747d379301ab76849f76000ae3a98d)
+        ;
+
+        
+    
+    
+                marker_4c8ee705a49f2dcea6c1d53f0d73dbed.setIcon(icon_8cb2bc6bf8bbd19714939f1a655a8813);
+            
+    
+            var marker_6af4d747256c766ce4ee2bdb02eb5a40 = L.marker(
+                [20.96749207836626, -89.62285320958135],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_5b808ae9034926e4533b8943d36d3706 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b99ca28ce7b1c8b7b864368e3141506 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bffccc9e3895d0fb9b2e111bb3a6222a = $(`<div id="html_bffccc9e3895d0fb9b2e111bb3a6222a" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Día de accidentes en Mérida: menores lesionados, policía prensado, volcaduras… - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizAFBVV95cUxQcXpmTjgtejRwS2ZvWWE4cmk4Zmt0Tml0cWdSYlVtNVdYcURGbmU4Um1uOFl1ZjN5RnFIdnNSMEY1czlZRTdnbXM2cllkbThQRlRNNjNqbUd1SjQwVzJYMmZsck1BZTVZLXVydEx1akpFTFlMNEoxSE5VYWdQUHRRTllGR0tNdk9Tc3UxYnFOc3h3YTM0bFozZnNtSk9TTkpTTEhLN2tiYm41ekt1cHlkR0ZwWmVXWXFZWEtEVC1JRW55YXFRbjZyNzRFLUM?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_0b99ca28ce7b1c8b7b864368e3141506.setContent(html_bffccc9e3895d0fb9b2e111bb3a6222a);
+            
+        
+
+        marker_6af4d747256c766ce4ee2bdb02eb5a40.bindPopup(popup_0b99ca28ce7b1c8b7b864368e3141506)
+        ;
+
+        
+    
+    
+                marker_6af4d747256c766ce4ee2bdb02eb5a40.setIcon(icon_5b808ae9034926e4533b8943d36d3706);
+            
+    
+            var marker_03d752ccf51dc55070c8849c98f5227f = L.marker(
+                [20.963157377727185, -89.62052327974116],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_fece7bd82b5d2ecce6820b897b20b515 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_346a3700e3c1998330cd77aa2d3d0c33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f1cb832541bb3beef8f7615f6f858b8 = $(`<div id="html_8f1cb832541bb3beef8f7615f6f858b8" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>La Policía Municipal de Mérida pone en marcha el operativo "Regreso a Clase Seguro 2025" - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi0gFBVV95cUxOa3RQYkNhWnMwbW5FVFc3ZTd5bjdndDNIejNPVEptM1FxSEw4M1p3X1FTT2ZKUExlSDdiaHNQYXNxQXlOY09WS0wyR2c4dGoyS1BzVHc4QllxblE5aDRpeVdiTkdHWE5RR1pGYU5TWS15TERRM3VOT1Q3QzZoUUdMNTNnREd5bzhPNEx2a1ltRkRRZVhsQnJvUlBINzFsZGNJZUs0YnBhbmNuM0ZzVUtXWWRGVHFQLXN0NVRUQzdpM3JMUDFtUU1ZMG1sbk5hSGY2VWc?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_346a3700e3c1998330cd77aa2d3d0c33.setContent(html_8f1cb832541bb3beef8f7615f6f858b8);
+            
+        
+
+        marker_03d752ccf51dc55070c8849c98f5227f.bindPopup(popup_346a3700e3c1998330cd77aa2d3d0c33)
+        ;
+
+        
+    
+    
+                marker_03d752ccf51dc55070c8849c98f5227f.setIcon(icon_fece7bd82b5d2ecce6820b897b20b515);
+            
+    
+            var marker_293cb411436ebf0dc2268d99a0e02a32 = L.marker(
+                [20.919898613736855, -89.54181893171672],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_2ef769c19119d9b65de5cfca377d2d16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c77348393cac5f788d1743797a6cb495 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee466d21e634cfedfce83604d2597550 = $(`<div id="html_ee466d21e634cfedfce83604d2597550" style="width: 100.0%; height: 100.0%;"><b>Kanasín</b><br>Proyecto Ie-Tram. Darán inicio trabajos de mejora vial en Kanasín - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMivwFBVV95cUxOY25IZVd4LWZzbjVxOTdyMnMybjdVamI1M0VDS3Q0dGU5bm5GX1lzbkdTeHN5RU5vYVM2ODRGRzA2UE1fYkYyZF8weEpSVkx1VWpkWENUSWhENWxNejRWQl8yRHJOZWRFWndwT0hrNkUxVFBnSWpxSzVFWVdmMk9NNFl1Qy1pLUZoUnBfNXQ1SGtqaE5fRklKdFZwSkdUVFFzdEI1SDdFS0xFMUgtWFdrZjl6Xy1WeWVkZ2pqTk1FQQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_c77348393cac5f788d1743797a6cb495.setContent(html_ee466d21e634cfedfce83604d2597550);
+            
+        
+
+        marker_293cb411436ebf0dc2268d99a0e02a32.bindPopup(popup_c77348393cac5f788d1743797a6cb495)
+        ;
+
+        
+    
+    
+                marker_293cb411436ebf0dc2268d99a0e02a32.setIcon(icon_2ef769c19119d9b65de5cfca377d2d16);
+            
+    
+            var marker_44b62ec4e94fc8b6c31138042708db50 = L.marker(
+                [21.24705655502648, -87.87565012380662],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_1e06de246330c2d10e95d3f657b43e95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75bf26d92d83c95995330309d7d248a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c553ba85e58f93e6181a9edb37ff3410 = $(`<div id="html_c553ba85e58f93e6181a9edb37ff3410" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Terminan polémica glorieta en Tizimín, a 5 días del cambio de gobierno - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxOeHNvUURESFEzbHZiM0d4VE81a2UxdzhLdUxDQXo2VUp4a2ZNbURsclBSazh1dGNGY2hpMnlrQ1MwQ1JuQllqR0o1MHNUNHp3a3hKTnExcENLMEFuWkE4VWpNQS1KNmpIRHVSTERzM3ZVbFVtdFBOcDlXYTJYekpGUUl1a0RYTDhDRVJ0eklwUEJjTFRJUTNhWnY4V3JFZ2tSVGsxSndneDhoaDMzN2R3bnQ0U0xhc1k2VEYzdw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_75bf26d92d83c95995330309d7d248a3.setContent(html_c553ba85e58f93e6181a9edb37ff3410);
+            
+        
+
+        marker_44b62ec4e94fc8b6c31138042708db50.bindPopup(popup_75bf26d92d83c95995330309d7d248a3)
+        ;
+
+        
+    
+    
+                marker_44b62ec4e94fc8b6c31138042708db50.setIcon(icon_1e06de246330c2d10e95d3f657b43e95);
+            
+    
+            var marker_495d8f0731e853197c3112d2840c4ee4 = L.marker(
+                [20.96301261076866, -89.61950564202085],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_9f0bcb6b81c658f51a198b7c25373319 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb835486d24ddbfe0f2d634c9e491dff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3e12c7d0e9d57d0a5cb560abee49d05 = $(`<div id="html_c3e12c7d0e9d57d0a5cb560abee49d05" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Cambios viales en el Periférico de Mérida: ¿Continúa el caos de automovilistas? - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizgFBVV95cUxQdE91X0VuVnVIWVYzeDFQX1RzcXhVNVhwM01HZDZjdVZkLVlPSXFYbm92TXRORnBSUWJCN3doNGVBZ3RIbzEtam9rU3ZZSFlxT2x1eXRRdHhLbS1mbDBqNG1NZzJaUk02NFNvbmhaTkdjZXY3bVN4S293eFU2V0xadUxIVlNiV2xsWnNQeXU3WXFLeXFGcDJvWGtPYjFLUFZwRWlJYzNkQkozTHowcHhmWGRpX1p4X2NFc21aMlY0N1VIWklMOS1CakU1V0R2dw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_fb835486d24ddbfe0f2d634c9e491dff.setContent(html_c3e12c7d0e9d57d0a5cb560abee49d05);
+            
+        
+
+        marker_495d8f0731e853197c3112d2840c4ee4.bindPopup(popup_fb835486d24ddbfe0f2d634c9e491dff)
+        ;
+
+        
+    
+    
+                marker_495d8f0731e853197c3112d2840c4ee4.setIcon(icon_9f0bcb6b81c658f51a198b7c25373319);
+            
+    
+            var marker_6725967b4a25d4a73430b282a5f96553 = L.marker(
+                [20.847459557695828, -89.77249051002102],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_404365e632a9ce57be8e528e9f49ff55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4bf9d732183839e15df799adf5f8e90b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f409950eeac788a89c11f6c14b5df8ee = $(`<div id="html_f409950eeac788a89c11f6c14b5df8ee" style="width: 100.0%; height: 100.0%;"><b>Umán</b><br>Lesionada por un repartidor de huevos en Umán - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMinAFBVV95cUxQVGJHMkg1UHFBcmpaSXFyWjMtWEVyV1FwZFdvN1Y1RDdaTXc4TDJ0ZVR2LVJzdEtEbnctd3NuOUVqcVYwQjNGOERpajN4U01MNXZlcnlJMW9HRmZhaGh2X0tkUG1LMGhkcGNHcm1zWno2cVA5eHpHeTM4VkR5c0o0Qm5xVlhjRFBWNmQyRXBuelRnREkwYklZaThRWGY?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_4bf9d732183839e15df799adf5f8e90b.setContent(html_f409950eeac788a89c11f6c14b5df8ee);
+            
+        
+
+        marker_6725967b4a25d4a73430b282a5f96553.bindPopup(popup_4bf9d732183839e15df799adf5f8e90b)
+        ;
+
+        
+    
+    
+                marker_6725967b4a25d4a73430b282a5f96553.setIcon(icon_404365e632a9ce57be8e528e9f49ff55);
+            
+    
+            var marker_1b4814df45197eade34a580edc6eacff = L.marker(
+                [20.970230758374026, -89.61876557568695],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_529516b0f957c57a2271ca8f064d0a03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_158d80aefdb7740798e0dd839cf6730d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8c0abda1bc545b556f304a2ff7654bf = $(`<div id="html_e8c0abda1bc545b556f304a2ff7654bf" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Mérida Archives - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VR20tZHlZcGx1STdaZTBLWXhuclZlejRqSU1kZ0hVYXFNVWJ0QVE4SzhIN2o5bmhpaE03QnJ2TnFWa2tjY0RzY19LR3Y4QTJSYzZJaVdLbG84Z0JMR3RTYQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_158d80aefdb7740798e0dd839cf6730d.setContent(html_e8c0abda1bc545b556f304a2ff7654bf);
+            
+        
+
+        marker_1b4814df45197eade34a580edc6eacff.bindPopup(popup_158d80aefdb7740798e0dd839cf6730d)
+        ;
+
+        
+    
+    
+                marker_1b4814df45197eade34a580edc6eacff.setIcon(icon_529516b0f957c57a2271ca8f064d0a03);
+            
+    
+            var marker_5d0ec2140ec0aefe9f36b75afb5d5c74 = L.marker(
+                [20.96842494845191, -89.62178624144173],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_76fa6c6ab87a37b9b693127b12d50e5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd7a36bfed56c49bf34f8f4499bae1bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0582a6a3cbe34ac3e371d82f3951cf58 = $(`<div id="html_0582a6a3cbe34ac3e371d82f3951cf58" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Accidentes en el oriente del periférico de Mérida ocasionan caos vial - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSWttSFdFZFFjV3cwNmZJeDI5aXlwamtIcG91S1RCRlc1enZmUjhHU05pcVd3dUJxb0Z2NEtjZFNSeGF6NGJGOVpQX1cxVlBpbGt0d1BBeGxHeEt5M3ZDby10X1pQTFdWajhWRGkteUtqQXR4UERfLW1uMU81MDJteVV5WjExTWY1R19VNG9kZUFPbnE0U1hVZFE4eW8zR3pHWDltZkQ4WWxObEZXNkxOZ3ljQk1TX09BSXN3?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_fd7a36bfed56c49bf34f8f4499bae1bd.setContent(html_0582a6a3cbe34ac3e371d82f3951cf58);
+            
+        
+
+        marker_5d0ec2140ec0aefe9f36b75afb5d5c74.bindPopup(popup_fd7a36bfed56c49bf34f8f4499bae1bd)
+        ;
+
+        
+    
+    
+                marker_5d0ec2140ec0aefe9f36b75afb5d5c74.setIcon(icon_76fa6c6ab87a37b9b693127b12d50e5f);
+            
+    
+            var marker_495d825a1aefa413303052614d37734f = L.marker(
+                [20.968158430719544, -89.62073366645082],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_cb12dbe40d3ac594f2d29aaf0cfb462f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1f6b0814f34086e4a5dc56f2020e59d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e653ce447f7577bee34cf556a1278de = $(`<div id="html_3e653ce447f7577bee34cf556a1278de" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>En Mérida, pintan pasos peatonales en la Plaza Grande y en Santa Lucía - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiuwFBVV95cUxObXNJaWNjUXp3ZS1mdmZRVklsRnNwTzlPeUdUZTd3b2Etd0p4MVhWTkFRdkNxTzFaUGRWU2xLWklHX1lBQVhNenYxWkhlNjZpMzlzcERoZmwxR05La1J5cTJZOWd1UzZnYU9yWUZQZkZ5TWtEbzJra2dTR19wSTlLRk9FVGo4S0VDaEZCN0FtTEcwZ3RHOF9MSUI1Ml9RMTk3NmxkamZMRWdLQWQyR2tFM0IzVzRRcUNueW5j?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_a1f6b0814f34086e4a5dc56f2020e59d.setContent(html_3e653ce447f7577bee34cf556a1278de);
+            
+        
+
+        marker_495d825a1aefa413303052614d37734f.bindPopup(popup_a1f6b0814f34086e4a5dc56f2020e59d)
+        ;
+
+        
+    
+    
+                marker_495d825a1aefa413303052614d37734f.setIcon(icon_cb12dbe40d3ac594f2d29aaf0cfb462f);
+            
+    
+            var marker_4f445b24d065a9978bf1f0f269757a08 = L.marker(
+                [20.96332330768866, -89.62622861002718],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_35e6d77c27fa855bd64645f03c60f584 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14e991b0281664b1c13d7198425a6913 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb31b529dc94bac5ffadabcbc6461b3d = $(`<div id="html_bb31b529dc94bac5ffadabcbc6461b3d" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Tarde de accidentes viales en carreteras cercanas a Mérida: volcadura deja dos lesionados - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSTE0eF9LTVJRT0VmZHlYc2pZbVZjZXlLdTdpNXZHOE5na0NIekZTU0lBNzZGa1phVVh6OTJQcnRQa1ZicC1nWEFveVVweFFQZ1AtOVJFaUNxZXJIY1QyRXprLUxNWklua0JEQWk4dzFlRXlhYUlqaExzaE1LSzBYWW9IdmQwYnVSd1h5ZUlzNk5iRFM3V0x3Tm9FZkhjQXZwN056QUVHX0xUaVNMV0tFYm5ZdVhpTXZidEQ1U19rXzExUGJ5Z1Q3YlpuNktjd0dXY1gtVU9tRGN2bVk?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_14e991b0281664b1c13d7198425a6913.setContent(html_bb31b529dc94bac5ffadabcbc6461b3d);
+            
+        
+
+        marker_4f445b24d065a9978bf1f0f269757a08.bindPopup(popup_14e991b0281664b1c13d7198425a6913)
+        ;
+
+        
+    
+    
+                marker_4f445b24d065a9978bf1f0f269757a08.setIcon(icon_35e6d77c27fa855bd64645f03c60f584);
+            
+    
+            var marker_0119a9249937cab4fbd197b9980ce3bb = L.marker(
+                [20.97155590321814, -89.6283030010348],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_fa16a8512111187bebd0e41c4c81d075 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3791ca8350fd20d4a0d8b3e1ab2e7ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9484035fdb95759e77b59a62e378262e = $(`<div id="html_9484035fdb95759e77b59a62e378262e" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Choque de camiones en el Periférico de Mérida: casi cae del puente - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMimwFBVV95cUxPUEFIYzQwUzVvWXhaRFk2S3NXejJJYlJZSGVOcDR5NWlLaTFjYXU1X041bVI4Mmw2RGhOM1FIWlNuX0tFaTEzQWZDc0xvMnFVMTFuQVJfS2FETEgzNE5GUU9QR2xzN0hacE8zZml4X20yT3VlQWE1TlZMUWEzZmFPYWFzclNQbktNdEpoRHJ0bG8zdFBSaVQ5VDhkUQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_e3791ca8350fd20d4a0d8b3e1ab2e7ae.setContent(html_9484035fdb95759e77b59a62e378262e);
+            
+        
+
+        marker_0119a9249937cab4fbd197b9980ce3bb.bindPopup(popup_e3791ca8350fd20d4a0d8b3e1ab2e7ae)
+        ;
+
+        
+    
+    
+                marker_0119a9249937cab4fbd197b9980ce3bb.setIcon(icon_fa16a8512111187bebd0e41c4c81d075);
+            
+    
+            var marker_17558fde147973517cddfd011cad1632 = L.marker(
+                [20.962121797160343, -89.62670817250664],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_fb49c473e29eb11222ef69caf25f9171 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7d8504e1522eba43a6401a965e0c783 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca43601c214c69305d4d4fe586681334 = $(`<div id="html_ca43601c214c69305d4d4fe586681334" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Reportan varios accidentes de tránsito en Mérida en un frío amanecer - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiugFBVV95cUxOcndVNmo3OUUtZTJfaDVoZFJpbWhmei1iTFJrV09saFl4QUhWRVlIclNhX2FGaEVmOEI5SW1leGxHd212YnZJYVQtWENSMl9aUDg5dWU0T1p2QXR3SURyTmhNMVQ5ZGJuc1l3MndjLUhiNXYwSzhKZm5OVmt4VnpLbTQzdXNuRHFlOUx0a25ZUEoxakh5azRJYlV6UjR6MFVYbkRxaEpWX29SN0M4dVVsRnFtQVFJSF9IbUE?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_b7d8504e1522eba43a6401a965e0c783.setContent(html_ca43601c214c69305d4d4fe586681334);
+            
+        
+
+        marker_17558fde147973517cddfd011cad1632.bindPopup(popup_b7d8504e1522eba43a6401a965e0c783)
+        ;
+
+        
+    
+    
+                marker_17558fde147973517cddfd011cad1632.setIcon(icon_fb49c473e29eb11222ef69caf25f9171);
+            
+    
+            var marker_1331e127e17ab9d69db6b904852e4777 = L.marker(
+                [21.245542606714327, -87.87134534317047],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_06b1a6149b0bfd4f6f25d01cdd0fe18e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7590a7d8ec2c67fedc93b811dfed3ff8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a9665dd524c5c04fa67d592a8d2421a = $(`<div id="html_7a9665dd524c5c04fa67d592a8d2421a" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Motociclistas resultan heridos en dos accidentes viales en Tizimín - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLThqZlBPRHZCSzROdTVvSzJzVEVENnl1Y0lMQWRXaWVKa3BvaFpvX1VtQV8tM2o5YTNqWmpUYS1sblV0ekstN3Z4VEJudVJoRWF6VGZ1NDI3V1Nrb1JDNFJSekxNOTBxMlY3OWxTOHNGUnNobmxkZ0lrem5CeDBUX2xVR0ZwZm5fZV95bVNzNDZ5VURqMS1JMi1saV9Kb0l6QVBTZGpFOHU5dnhBSjBjM01oQ3I1Y2Yy?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_7590a7d8ec2c67fedc93b811dfed3ff8.setContent(html_7a9665dd524c5c04fa67d592a8d2421a);
+            
+        
+
+        marker_1331e127e17ab9d69db6b904852e4777.bindPopup(popup_7590a7d8ec2c67fedc93b811dfed3ff8)
+        ;
+
+        
+    
+    
+                marker_1331e127e17ab9d69db6b904852e4777.setIcon(icon_06b1a6149b0bfd4f6f25d01cdd0fe18e);
+            
+    
+            var marker_ccd7414cf8f2c239828407d9dd3d71fc = L.marker(
+                [21.25342972701592, -87.87596357653733],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_d92c0e1b23bcea4f6ddcf5baab4168d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15519f4e91256ad2673f437324af3139 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd383907d72fca395c97bb0c2fc1b5b3 = $(`<div id="html_cd383907d72fca395c97bb0c2fc1b5b3" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Choque entre motocicleta y auto moviliza a paramédicos en Tizimín - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMitwFBVV95cUxQbmh3WGdIdkZPSGtQV1dvQkVLM1djcHlCMlBpQk5JTWlsNHgxc3owdnBwMDRqeUtBdVhnc1JfS3huakFFWVd2ZHNXQUlRN0tkRDVsb3RHR2NXaUpVbkFKU0VMQ3BlMDZ2OVVDT0ZaQVp0c1pRSFBuVVlucDhRUVBvaFdGSUxzbXV6S0h3QkJtbXYyUEZvTDRmcFM2ZjlUY2ZWdWdlUzRmVWVaU1YySUY0YWF3MWstbzg?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_15519f4e91256ad2673f437324af3139.setContent(html_cd383907d72fca395c97bb0c2fc1b5b3);
+            
+        
+
+        marker_ccd7414cf8f2c239828407d9dd3d71fc.bindPopup(popup_15519f4e91256ad2673f437324af3139)
+        ;
+
+        
+    
+    
+                marker_ccd7414cf8f2c239828407d9dd3d71fc.setIcon(icon_d92c0e1b23bcea4f6ddcf5baab4168d4);
+            
+    
+            var marker_05a1a0401cd5b3c5486ccb3b85c810a4 = L.marker(
+                [20.97314362388177, -89.63041292195241],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_b74dbd230cc46b37a759e57c667ad119 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45ab1d182972e1eacb75a5eb85074f7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de9a49430d3344153a136c16598fddc9 = $(`<div id="html_de9a49430d3344153a136c16598fddc9" style="width: 100.0%; height: 100.0%;"><b>Centro</b><br>Yucatán, centro de lavado de dinero del narco - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMimgFBVV95cUxOZ0RlcHQ3V1NyaXF2UzVNbUJNTkYtWVNoaHhXU3dTa3o0aUs5VXlQZ0thRDZ6WUNSYkxyTTFYTHYtM1EtakVHTUZrNEQyeUJXRFBPVTJORFNMajctZ1Y1UzhoaW9TNnB4TWdTbDF4eXdGZlJqa2dfampseWxmQ1JJUVpmbkYzc2hBMDJtZEw1a3RTTHhvVXBvbExn?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_45ab1d182972e1eacb75a5eb85074f7d.setContent(html_de9a49430d3344153a136c16598fddc9);
+            
+        
+
+        marker_05a1a0401cd5b3c5486ccb3b85c810a4.bindPopup(popup_45ab1d182972e1eacb75a5eb85074f7d)
+        ;
+
+        
+    
+    
+                marker_05a1a0401cd5b3c5486ccb3b85c810a4.setIcon(icon_b74dbd230cc46b37a759e57c667ad119);
+            
+    
+            var marker_efa59327b84bb06bb9a292700e6a82d7 = L.marker(
+                [20.96445471319262, -89.61905479412209],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_4dfef62e9025bb13322bc4a62fe0c968 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7cefb7042e4001ad10fa86999d5dcb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5b52e26b1a37e6e0af306c40c0617c0 = $(`<div id="html_f5b52e26b1a37e6e0af306c40c0617c0" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Camión de mudanza choca y derriba árbol de chaká en el periférico de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQW9pQTliU0twLWlnNG5Rai1jcWlZblpqaE10cjVraE43QWxFenlaYnFzclRWUkt3SWhWY1M2Q3I3Z3pvLV9SNVVkNHFHcGNHWlNUbzV0aUdPNzVmdkFCeVpuTTZfZzZGUjhTSzhKOUo4UTFfdThWWHJZYXRtekxJajNWVDJrVkdoa2lMRFBpdm9QRVQ2Q3JYYUN5UlkwNUR0eDdiV2tacFgxR3JKU1VBc3VjZ1hjQml5WFlOdVN2d3R2cUU?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_e7cefb7042e4001ad10fa86999d5dcb9.setContent(html_f5b52e26b1a37e6e0af306c40c0617c0);
+            
+        
+
+        marker_efa59327b84bb06bb9a292700e6a82d7.bindPopup(popup_e7cefb7042e4001ad10fa86999d5dcb9)
+        ;
+
+        
+    
+    
+                marker_efa59327b84bb06bb9a292700e6a82d7.setIcon(icon_4dfef62e9025bb13322bc4a62fe0c968);
+            
+    
+            var marker_81ba649df1d2140a24666c4f0726967b = L.marker(
+                [20.97192410028808, -89.61974876622028],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ed4b333512cf3fbab58bdee53bc9db9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fab414f2b47dfc2ae1644d69afe301f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a53ac1f706c8073aa31eeb09e5c1e0b = $(`<div id="html_7a53ac1f706c8073aa31eeb09e5c1e0b" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Reportan dos accidentes en el Poniente de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMinwFBVV95cUxPWEIwTEhCdTdLZGtEWHdQV3NwNkJjMm5BZGVjZHFKc1BIYjNLTzNHdDdsSWpULUlNYlZrX0hBMVhTSkhVNFdLbjg3dVFwOHdQbjNmLW1GSFExdDk5SkR3SmRfQ1NWWmI5ZWZVNk1qemNxazh4dERxQnVhZmpXdklXNEpHeGZsSnd2RzhfQVJ1MGVPZmNMR28tZjFZeTdzZFE?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_fab414f2b47dfc2ae1644d69afe301f3.setContent(html_7a53ac1f706c8073aa31eeb09e5c1e0b);
+            
+        
+
+        marker_81ba649df1d2140a24666c4f0726967b.bindPopup(popup_fab414f2b47dfc2ae1644d69afe301f3)
+        ;
+
+        
+    
+    
+                marker_81ba649df1d2140a24666c4f0726967b.setIcon(icon_ed4b333512cf3fbab58bdee53bc9db9d);
+            
+    
+            var marker_784ea0765854b0f39f29a4f824d1d9db = L.marker(
+                [20.96452206560833, -89.62637317069041],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_aef189caefa151296ba71f52cb55e9c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d91e03d55ba97e77ee0f82099396a54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a254d2b2ef641efe2e5536892c9a36de = $(`<div id="html_a254d2b2ef641efe2e5536892c9a36de" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Tráiler de doble pipa derriba postes y causa caos en la carretera Umán–Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMixwFBVV95cUxPX1dGbnU1ejMxUU13MmFSRDY1Z0NDWE9fM1V1M2hPTzlmdEVRYUNvQTNCUDAyVElKZzdQUzVXMDI0WDFaUmt6X2h0NFVLb0RDNHBfUjdaRW8xSFpYY2VIT0dRRWRLYmZFbmpTdXhZaU9VMFdPQmRvVHZOZUpmTmU4bW5uWnNlWGU1cnpObHBnbFZabVZBNHZ6X25ZRkcxYUlrNTdIaHJTYkRzTGtZU3h4cS05S3BwQXFCSTdEUEs4RmRMdUtRVW44?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_3d91e03d55ba97e77ee0f82099396a54.setContent(html_a254d2b2ef641efe2e5536892c9a36de);
+            
+        
+
+        marker_784ea0765854b0f39f29a4f824d1d9db.bindPopup(popup_3d91e03d55ba97e77ee0f82099396a54)
+        ;
+
+        
+    
+    
+                marker_784ea0765854b0f39f29a4f824d1d9db.setIcon(icon_aef189caefa151296ba71f52cb55e9c3);
+            
+    
+            var marker_bcd2efdae9cabb7c5a578e8288fde53f = L.marker(
+                [20.690673631580886, -88.199885384671],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_af68a459b7552dd8ac5f85ae9de0e670 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_142b7133bb975d3e97939b268e9bcaf8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e325168468463652c9d5e83af349acc = $(`<div id="html_5e325168468463652c9d5e83af349acc" style="width: 100.0%; height: 100.0%;"><b>Valladolid</b><br>Alcalde de Valladolid rinde Primer Informe de Gobierno, ¿qué destacó? - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiuAFBVV95cUxQeDlVOG1rSjVtR1VhNm1qSFpGdzlyNEEwRERKcDAxdDBpcWduUjFzbnRMYzZBTng5NDkxMmJfMEkzcWlPd1M5MzZ0QmFyXy1lUzdORXB3RmZqTk54ck1lbWZiTHBMcnJGWEE0UFYweU5CaFV0LWVrbFN0VWdZNDRhU1E1YUdnelJ3d2FwcnhIRUZyY3BvekhidC0zcnFabzc5MGFjcjV2NkJIcGNIbGFJSUlJMU9kd0dn?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_142b7133bb975d3e97939b268e9bcaf8.setContent(html_5e325168468463652c9d5e83af349acc);
+            
+        
+
+        marker_bcd2efdae9cabb7c5a578e8288fde53f.bindPopup(popup_142b7133bb975d3e97939b268e9bcaf8)
+        ;
+
+        
+    
+    
+                marker_bcd2efdae9cabb7c5a578e8288fde53f.setIcon(icon_af68a459b7552dd8ac5f85ae9de0e670);
+            
+    
+            var marker_95dedbd87f886bc91d21a72c29eacdc4 = L.marker(
+                [21.162686908797337, -89.34123288785729],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_10965c7af9a5aa4d6fe2ba4f507a0dcc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60976beb47e0d81063e4144480413b3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb37713ecadaade710c784b4be158cc7 = $(`<div id="html_bb37713ecadaade710c784b4be158cc7" style="width: 100.0%; height: 100.0%;"><b>Motul</b><br>Motociclista menor de edad resulta lesionado tras choque en cruce de Motul - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiwwFBVV95cUxONlhudXlkLUI4SFFJcjBxcEl6b011ekN5bl9zdkRZb3F5ai1JNHZEMW1vRnpWdGE4Z3Izc18xNkd4cnVGbTk3bl9QQkNtNnZqTUhFWmJ4bTdITG91SS1zX2QzMnhDbGhTNGtHSzBYRTBIYnpsMGZhN0huNG1ObnQ4LTBOX182V2hnTkJ0dHFlbDlUQXJDZjRXWjBEU2JFLTg5SHRfdDI0UXFqbE5QRmltWktjTFVWaktnR1JQbk9HdG0tcWc?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_60976beb47e0d81063e4144480413b3d.setContent(html_bb37713ecadaade710c784b4be158cc7);
+            
+        
+
+        marker_95dedbd87f886bc91d21a72c29eacdc4.bindPopup(popup_60976beb47e0d81063e4144480413b3d)
+        ;
+
+        
+    
+    
+                marker_95dedbd87f886bc91d21a72c29eacdc4.setIcon(icon_10965c7af9a5aa4d6fe2ba4f507a0dcc);
+            
+    
+            var marker_df590d44ee976721d74ec42dc7f805e4 = L.marker(
+                [20.96973150257811, -89.62036535833913],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_54c169af9c64674e1ac48bd755ed1ca5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79b64f60fdcd75dfc0e30eaf77df70b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc17a6e17fa3ef114de8b662557e207e = $(`<div id="html_dc17a6e17fa3ef114de8b662557e207e" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Aparatoso accidente en Mérida: mujer lesionada en la avenida Tecnológico - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxOWlJtNFhVdWlNY1F2aVEzQzVyU2lFTi13c3RuQ09NWkNtX1ZUNDVibWVnYkVMWHVvWWxla2NlMmd4MEJJNFgyZVZZR2hlaFhPdm5KbGg4aUtBLXBhS1BuQmlqc1BUWFlEa0ZwMUplVlJyY0xBaXZjUEJxRUNFQ3c0MUUwSmtISGVzbzRXUll4VEhuWmxyUGl3MGJ3VXBleFliZTczZTQyeG1DM1dXMThmc0NEaEtqbWgxaUtCWDRB?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_79b64f60fdcd75dfc0e30eaf77df70b6.setContent(html_dc17a6e17fa3ef114de8b662557e207e);
+            
+        
+
+        marker_df590d44ee976721d74ec42dc7f805e4.bindPopup(popup_79b64f60fdcd75dfc0e30eaf77df70b6)
+        ;
+
+        
+    
+    
+                marker_df590d44ee976721d74ec42dc7f805e4.setIcon(icon_54c169af9c64674e1ac48bd755ed1ca5);
+            
+    
+            var marker_31d9ae4b75477e6dff0e33ddfcf47683 = L.marker(
+                [20.97191703613027, -89.62004271742474],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ba115031e8d08a96519437a9e6facce7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16e667b15e93174cbc61b7218124b911 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7c9803d6f3ebcf6ac723ffc0c62e087 = $(`<div id="html_b7c9803d6f3ebcf6ac723ffc0c62e087" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Caída de árboles en Mérida: ¿Quién es responsable y cómo se debe evitar? - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTlhMc1BhdXhnTHpTVEJBdXRNdF9TOGFoLTBQNUMtdkxqMW94S3lIdjhnczdTQWlEM1dBZE1GUzY0RU1ZMU4zazFyVzM0WXd6NXRyMzVtRHVEQkxRd1VWLTYxMHZzMmMwZWZkdjVtRTE0cXhVVTlUWF9ERlkxOUJrcFVUWmxrM2lrR0hfbUNsWmdyak5VSGV1WFp2eG9Gc3A0UkVUVzhYUEttSWRVNjdNblQ5enFIaW1OZDlDdXNsbGhrUQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_16e667b15e93174cbc61b7218124b911.setContent(html_b7c9803d6f3ebcf6ac723ffc0c62e087);
+            
+        
+
+        marker_31d9ae4b75477e6dff0e33ddfcf47683.bindPopup(popup_16e667b15e93174cbc61b7218124b911)
+        ;
+
+        
+    
+    
+                marker_31d9ae4b75477e6dff0e33ddfcf47683.setIcon(icon_ba115031e8d08a96519437a9e6facce7);
+            
+    
+            var marker_09ca068919d4a875b787a51242d86614 = L.marker(
+                [21.252866767063683, -87.872251405315],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_39121230d31379e5bcc93ce743b39bde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31dfd318c386fa5fef34ee119aa55d42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13cde22560b495479308c0ae7f56967c = $(`<div id="html_13cde22560b495479308c0ae7f56967c" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Las calles, prioridad en Tizimín - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiigFBVV95cUxNRWg5bFBGaW5qQmZ5UHA3WVNVMEZ6ZUh2M2lHa3lZRUlZcDMxVm1xVl9Rc3lZRmxTeEZyVnBLbkRmczVqS3F0SlNZYmtGTU44WThyOEprR2pDdTNZdGZLc2s4eC1salEweTk2ZGxIemxKYm96NlJJWTFBN0tvcjJXT1ZFYzRDd2s4Q0E?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_31dfd318c386fa5fef34ee119aa55d42.setContent(html_13cde22560b495479308c0ae7f56967c);
+            
+        
+
+        marker_09ca068919d4a875b787a51242d86614.bindPopup(popup_31dfd318c386fa5fef34ee119aa55d42)
+        ;
+
+        
+    
+    
+                marker_09ca068919d4a875b787a51242d86614.setIcon(icon_39121230d31379e5bcc93ce743b39bde);
+            
+    
+            var marker_9fa7a8053e32b21392f25bf4dd9517fd = L.marker(
+                [20.96930340901151, -89.61890974569833],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ba3e96dc34a11d4fd9758722179252a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d92634e1689d51f253ed31afda14a94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad15d645799bf2cf6b75c76b5f495442 = $(`<div id="html_ad15d645799bf2cf6b75c76b5f495442" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Reportan presunto robo de una camioneta en el fraccionamiento Brisas de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMixwFBVV95cUxNZVVqOEJEaFV0YnppRkFpTzNXNGpXbXNIajNqM3p3NWMwYmxJYlIwTG12OHV5b0tISUNHMjhFc1R5NkRYZkRUZVkzWkxlQTl0NWpYSk44YUdUY3R6TDJ5Q2pOQlpyREdIZElpak9BWkw5VDZFem1FRkJQMGRkSGJsM0ZmTDRVSE0xR2NMczRzY0lua1FXbTd4RjduUV9KRUViRHRZRW9yOFBXMUs1X0dqdDVxRjE0M2RlczVpa0Y5SzhXRXRmTDhj?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_2d92634e1689d51f253ed31afda14a94.setContent(html_ad15d645799bf2cf6b75c76b5f495442);
+            
+        
+
+        marker_9fa7a8053e32b21392f25bf4dd9517fd.bindPopup(popup_2d92634e1689d51f253ed31afda14a94)
+        ;
+
+        
+    
+    
+                marker_9fa7a8053e32b21392f25bf4dd9517fd.setIcon(icon_ba3e96dc34a11d4fd9758722179252a6);
+            
+    
+            var marker_cf2821bd090fab484e9cc33cde429282 = L.marker(
+                [20.96955732451536, -89.62390423169543],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_cad1d5c82d904c02982ffed97c2defbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3537368d9a7a9f150c9af7093c74661e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b894767814e0905e836db5bfaa767da = $(`<div id="html_0b894767814e0905e836db5bfaa767da" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Así fue el desfile Cívico-Militar por la Independencia de México, en Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSjJBLTdpYmxNYk41ejE5NnFvLWtTd0hnalZuUklkNmkxenVvdmRHTi1yMzVxc0J6eWF6c0V4LWJMZUdpV09heGQwYjdOX0ZkOEJkWWpzbHNLX0U1ajM1cktqS3BjV2syLUtId1Zjc0VrQjljOTdBSWp2b1RURkN0Ty05bHJRanFHeFR6WkxueV9xNExuQ3R6TW5ydWlWT2tMXzB2QVJSUFQzM21sNFFQeWhERzFON1pEUC1IXzgySkhQQQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_3537368d9a7a9f150c9af7093c74661e.setContent(html_0b894767814e0905e836db5bfaa767da);
+            
+        
+
+        marker_cf2821bd090fab484e9cc33cde429282.bindPopup(popup_3537368d9a7a9f150c9af7093c74661e)
+        ;
+
+        
+    
+    
+                marker_cf2821bd090fab484e9cc33cde429282.setIcon(icon_cad1d5c82d904c02982ffed97c2defbb);
+            
+    
+            var marker_7495c1b9cb7f3f4fdd611dc4e330bd83 = L.marker(
+                [20.967017652664172, -89.62415961726059],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_5c0d5f4c42ffa795cc30fa8679358b95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0feb715e14f4367a559412ea66909109 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb32e079ba5713358cd63f0c0aaa63c7 = $(`<div id="html_cb32e079ba5713358cd63f0c0aaa63c7" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Estos serán los cierres de calles en Mérida para el 15 de septiembre de 2022 - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizgFBVV95cUxQZmlPVXFwb2NNajNjSkZBWFBtaFFvb1VkX2tMQmxwbmdvOUZ2SjhxUUFLSTlYMnhadktxVTFpMkxjNzkzYTJRMVNYRGpCOFB3MHpZY2dYWU16eXBLUVotbEJuZi1aVnd5d05fektJdktZdEZXZXdRNkJhR1hXbjdlcEdEUklPWl82QjVOSlU3cWRRME1BMGJ1blBRQnJOVXpqX2xOYWlZZlA3N1liOUFYaGhuZDhoUG82LWE1N2YyVXJxSW1rTEpnOGlnMVRBUQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_0feb715e14f4367a559412ea66909109.setContent(html_cb32e079ba5713358cd63f0c0aaa63c7);
+            
+        
+
+        marker_7495c1b9cb7f3f4fdd611dc4e330bd83.bindPopup(popup_0feb715e14f4367a559412ea66909109)
+        ;
+
+        
+    
+    
+                marker_7495c1b9cb7f3f4fdd611dc4e330bd83.setIcon(icon_5c0d5f4c42ffa795cc30fa8679358b95);
+            
+    
+            var marker_58ab74496649731faf980adf93bc60c2 = L.marker(
+                [20.97187298509333, -89.61882381257448],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_6296034517aba902816d35bca86e9115 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_989dc4f9867c8fc2ccc71b598868929d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7ee6a949b9f682badd952a569a6a9b8 = $(`<div id="html_e7ee6a949b9f682badd952a569a6a9b8" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Regular aforo en tiendas de Mérida por Buen Fin - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMingFBVV95cUxPQnJIZ2h0a1BSc2swSkItamdfdWVrSVMxcTk0R1J4QjFtaENzVzdkaUJUbjRGd0VQY0dwYk9UYkNTbGFCYUhkQWw5X3FiWDYyRDVXSFZMYk9yaUtsMk12UDEzMnJ5N1RqNEtjTHAteGwxdE5ON2dTR0R5VmZVSGRyZldlQUE4NXQxTmxEelJEbFhQWnBtdHNqR3dYMUpLdw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_989dc4f9867c8fc2ccc71b598868929d.setContent(html_e7ee6a949b9f682badd952a569a6a9b8);
+            
+        
+
+        marker_58ab74496649731faf980adf93bc60c2.bindPopup(popup_989dc4f9867c8fc2ccc71b598868929d)
+        ;
+
+        
+    
+    
+                marker_58ab74496649731faf980adf93bc60c2.setIcon(icon_6296034517aba902816d35bca86e9115);
+            
+    
+            var marker_c98d8b045c289aeaadca2d328d845eb4 = L.marker(
+                [20.845128822791775, -89.76627801167791],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_e5a267d61be4c3964ad83895042e5d5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f086743efb83ab805444eb81080e514 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bf7f3bab390cac427db7264ef848a77 = $(`<div id="html_3bf7f3bab390cac427db7264ef848a77" style="width: 100.0%; height: 100.0%;"><b>Umán</b><br>Mototaxi cae sobre su conductora en Umán, por esquivar a un perro - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ1JJUkpBM1JRNTJxeXlGR2RURm9FeWVLMHVWeHNsaEhzQlhueTBEQ21NZDhRc1doNTZVajJTcE1VdVVFRzZPNG1PeV9iUzlKLS05cnpMWmJHRm8tNTVXTUtPekNJcDNkQmZnbG5lNS1Qa1dIemZBSnNKTzBEd3h6T2RVSkxXRG5vcFh2TVNzZmxpVTE1QWNpNnRwcnBuZUJSRVVPazM2MHlaSDk5VlpYa092RkI1UQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_4f086743efb83ab805444eb81080e514.setContent(html_3bf7f3bab390cac427db7264ef848a77);
+            
+        
+
+        marker_c98d8b045c289aeaadca2d328d845eb4.bindPopup(popup_4f086743efb83ab805444eb81080e514)
+        ;
+
+        
+    
+    
+                marker_c98d8b045c289aeaadca2d328d845eb4.setIcon(icon_e5a267d61be4c3964ad83895042e5d5d);
+            
+    
+            var marker_39ed0c0e03ed57f0e8327a2069481177 = L.marker(
+                [20.964129210512585, -89.62434684180867],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_79e77990a97fb8485c1cd0bd6982afc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8988569d61ac5ec647ac757a69d5538e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df404842a965be1f27202626d534118c = $(`<div id="html_df404842a965be1f27202626d534118c" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Conductor de una pipa de Pemex causa un accidente en el Periférico de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizgFBVV95cUxOcXU4SFZkWmh2NXEyQ194aGNwbXBIYk9JVDVJVU9lbTlmNk1OTml0UUhFMHFWc3RORURGYUYzdUQxS2NUbE1fNmszVDd5WWFxV0tfcEJMTlI2ank2Y0ZPVFZHUnQ4SERZZHJXaUFteE5ka1J6TThsS1R5MktaOTFNcEhDS3NEQjdubUhaMWVlbDk3YnJkaUF5T01fbk56V3lzeUk3dGo3OTNCWXhQNXlTZVNfRGQzUHVuOFV1blFfd0JlWVlrZlN6eEtRclIwdw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_8988569d61ac5ec647ac757a69d5538e.setContent(html_df404842a965be1f27202626d534118c);
+            
+        
+
+        marker_39ed0c0e03ed57f0e8327a2069481177.bindPopup(popup_8988569d61ac5ec647ac757a69d5538e)
+        ;
+
+        
+    
+    
+                marker_39ed0c0e03ed57f0e8327a2069481177.setIcon(icon_79e77990a97fb8485c1cd0bd6982afc0);
+            
+    
+            var marker_3158e9b62eb5b818ad939a6ff952bac9 = L.marker(
+                [20.964802006152638, -89.62748021014019],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_360bd58d8f4cd2d09ec7afae93cb6630 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_031a7d22b1beb98882ad44786d9e8588 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22337fa2df62a0122172cc39f116f202 = $(`<div id="html_22337fa2df62a0122172cc39f116f202" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Crece la cifra de guardaparques en Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ25lcmd0ODlXREwwcEhjXzlfQkd6R20yalItVFFtWmFvSThnVUZLblRRZDJQdmtnQTFXMmNKQTJtUmpfeHdUaE5yOUVDamlKS1Y4SUV2TG83aWw3OVlpbDlCOXV3S2R5NGhtMVVxSW1ia2cyNEpEa1BKWW5qUmZ0NXFKVW1VR2I0UWdFdUllZW1Xc2hKVUE?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_031a7d22b1beb98882ad44786d9e8588.setContent(html_22337fa2df62a0122172cc39f116f202);
+            
+        
+
+        marker_3158e9b62eb5b818ad939a6ff952bac9.bindPopup(popup_031a7d22b1beb98882ad44786d9e8588)
+        ;
+
+        
+    
+    
+                marker_3158e9b62eb5b818ad939a6ff952bac9.setIcon(icon_360bd58d8f4cd2d09ec7afae93cb6630);
+            
+    
+            var marker_50309bfc74e50a559c7dfe4a03ee23a3 = L.marker(
+                [20.970001305096126, -89.62064490545741],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_0515d7ce4b7c29c60b62bb9d21b85c61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f38e769e1644a61aba3a841405f9389c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbfc3a6f62ec5ef26a9101a27b7f04d9 = $(`<div id="html_dbfc3a6f62ec5ef26a9101a27b7f04d9" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Abuso en el mercado Lucas de Gálvez, en Mérida: hombre a prisión preventiva - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxObC0xRWVVZlh1QzZGZjFKcC0tMk52WWJhNFY4cDhCd1BHMmpONmo1VlYxV2dtRlJ2QW5KWVNSNmlGWkN2NUpxT3BsM3F0S29mclEtOHdScnpsbjhNdjNKS0NaZ3pCQXFmRVdES0t3VUhWSkJpU1dybXN5Rmp4bmhvMDF6YmZWOG5qMEN4bzRZbGdVWDlGMFc2Rk5XYy1tcEtNbFhyZlZWM01KcVh5c1hoc2tTVTJHYm8yMDJ2Tw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_f38e769e1644a61aba3a841405f9389c.setContent(html_dbfc3a6f62ec5ef26a9101a27b7f04d9);
+            
+        
+
+        marker_50309bfc74e50a559c7dfe4a03ee23a3.bindPopup(popup_f38e769e1644a61aba3a841405f9389c)
+        ;
+
+        
+    
+    
+                marker_50309bfc74e50a559c7dfe4a03ee23a3.setIcon(icon_0515d7ce4b7c29c60b62bb9d21b85c61);
+            
+    
+            var marker_cf3a2cf4e0f2e742ccd1e86015e9e092 = L.marker(
+                [20.968807463064998, -89.62459110786781],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ddafba8027926c953861a6891414a136 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce67905f30dcbbe72f563624dc2d1c03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11295829cad323f21cb92c341c0b94d2 = $(`<div id="html_11295829cad323f21cb92c341c0b94d2" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Falta de transporte público causa aumento de vehículos particulares en Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizwFBVV95cUxPRVZ3YU5VMy01WmZsTXR0U3NYdFl5Y2dCYzZhYnVCVXNlTHN3bGVSUkJ0VWRCVUlzY0xaN1pFQVJ0NEo5bXl5VDJHcHVMdHQxdTlFSmZPVzVDOGZWdFBaSFpUaGNIdEMxMERYXzMtcVY4OVJfNm9EcnR2dDlzOHdCYlJadFZQdXpsdzZsY0JPdmtXbFFzV2V3QjFLTVhmVm5aaGhNd2dXUzlfOVRGWVpEQVowTWw0OTNsUnctc1lzZ21JSE52RWJOSGZ5UXI0d3c?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_ce67905f30dcbbe72f563624dc2d1c03.setContent(html_11295829cad323f21cb92c341c0b94d2);
+            
+        
+
+        marker_cf3a2cf4e0f2e742ccd1e86015e9e092.bindPopup(popup_ce67905f30dcbbe72f563624dc2d1c03)
+        ;
+
+        
+    
+    
+                marker_cf3a2cf4e0f2e742ccd1e86015e9e092.setIcon(icon_ddafba8027926c953861a6891414a136);
+            
+    
+            var marker_91275462f6f75a23ea05b1422b6aae4b = L.marker(
+                [20.967956732799205, -89.62558944389285],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_9a7ce7bc520359205aa15f7c70595a56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e54536759c8c5cdca3a8718eaad2a537 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_515c5dff540e07f2f9a8459d7d6a1c88 = $(`<div id="html_515c5dff540e07f2f9a8459d7d6a1c88" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Quick Lane inaugura un nuevo centro de servicio en Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3dXTXhIM1VRMmM2NFRQYWp0UUpSZHkydVM4RnZ3ZWNlMDdmREhWQ3l3cUp6Z2lNdjFQVUJOX2llVmQ2ZEtJcW54RFJ0YXFDUDJfODluQzNQNGptWlBsdENmTUpfVFUyb2w0RzNBZmJhUngxcVhpWVhGVUszWEhfYXZZVm1WYUZQUmtfRkI3SUl5S0JtLVZGck1FT2kxSlViSkZlOWZuV3pjdHFHSTB1TWJFYWg?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_e54536759c8c5cdca3a8718eaad2a537.setContent(html_515c5dff540e07f2f9a8459d7d6a1c88);
+            
+        
+
+        marker_91275462f6f75a23ea05b1422b6aae4b.bindPopup(popup_e54536759c8c5cdca3a8718eaad2a537)
+        ;
+
+        
+    
+    
+                marker_91275462f6f75a23ea05b1422b6aae4b.setIcon(icon_9a7ce7bc520359205aa15f7c70595a56);
+            
+    
+            var marker_93056c9757ab4eb5a98ce3f4c263eafa = L.marker(
+                [20.96267167883798, -89.62024308628716],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_9397e72b33f0436903f0b6e8cf15c89c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71020dc09230d4b4cc80ffaa91ca6500 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4195fc4245d0060f14b7c55878484612 = $(`<div id="html_4195fc4245d0060f14b7c55878484612" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Accidentes mañaneros en Mérida con saldo de un lesionado y cinco vehículos con daños - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizwFBVV95cUxNZEF2NEJwbGcyQ1V1bmdFbjk5eUdldjgzM2QtLW9TVEFQdF96d181NWFyZkxQS2ZwaWhHY3AyQ3pBbWFWTzRXcFlHclVVUVVKLUNLdFBXM1R1a2tjdTBCTzJnTm5rdTVrd01hUTBBZmo2bzJwcFpUMy1ZLU1YT3ZiN0JxTGZ6cW1WbGNxVDB5ejFHTWtOcnY1YTEzSzNyc09wVExnVnpkYXhCM0llemQ5cVZSME5NdThjVUFBQjAwRFluNFE0MmdCdUZiXzlrMUk?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_71020dc09230d4b4cc80ffaa91ca6500.setContent(html_4195fc4245d0060f14b7c55878484612);
+            
+        
+
+        marker_93056c9757ab4eb5a98ce3f4c263eafa.bindPopup(popup_71020dc09230d4b4cc80ffaa91ca6500)
+        ;
+
+        
+    
+    
+                marker_93056c9757ab4eb5a98ce3f4c263eafa.setIcon(icon_9397e72b33f0436903f0b6e8cf15c89c);
+            
+    
+            var marker_b97629b29d57ce18503955e34f2aba30 = L.marker(
+                [20.969999497518106, -89.62336121636254],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_6827555bed729ac06bcbda12d1e6d03f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_838158d7da3caa864d9b535f79d2c738 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92d0f19df5164cfcb1fa8e3f5c0d0772 = $(`<div id="html_92d0f19df5164cfcb1fa8e3f5c0d0772" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Aparatoso accidente en la Mérida–Tizimín: tráiler con refrescos termina en hondonada - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMizwFBVV95cUxOaE5KOFR1cXg4XzFtcGVaX1M4RXdkV1lRcUpJNEswMXFDdkVDTjhaV2lfdU1jZXBwNVViWFA2S1NnMk90bEh6cVNZN0lIMS1iR2xJMjFWb0p6SzRwQ2h0NU1yOEVnczdtZEpCVDJRSVZXa3BDSDVHUWFsaHdFRjRmOWhXNzNSY2hMU09VcTQ3aWNyTnVFNzlGZ0tHdDJGRE9TYXFGcFJMOUVaU2VwTllabm54WHc1Z3FWc1ZvMjNJeFd3TzVQVFlERks5T0U3U0E?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_838158d7da3caa864d9b535f79d2c738.setContent(html_92d0f19df5164cfcb1fa8e3f5c0d0772);
+            
+        
+
+        marker_b97629b29d57ce18503955e34f2aba30.bindPopup(popup_838158d7da3caa864d9b535f79d2c738)
+        ;
+
+        
+    
+    
+                marker_b97629b29d57ce18503955e34f2aba30.setIcon(icon_6827555bed729ac06bcbda12d1e6d03f);
+            
+    
+            var marker_eef41922fb41023e8d3ce5ba9c7a3db7 = L.marker(
+                [21.247893430341552, -89.68394040385961],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_5beb68926df7a3ffbeddd069b9c83e5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7013a02a145186926d21abfaddd4d1ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4fa638bc60f048b34512dfda32285b25 = $(`<div id="html_4fa638bc60f048b34512dfda32285b25" style="width: 100.0%; height: 100.0%;"><b>Progreso</b><br>Choque frontal deja a motociclistas con lesiones graves en el puente de Yucalpetén, Progreso - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi2gFBVV95cUxQanVvX1NQOVozazFMb0Fwd0lpT3RocDdJZUlSODNPaW1fempET0JBbi0zMDFMaEF5VU9uV3hzSkdFdXlKUHBRbWVjT1pybXhYN25aVFI5MWw0b2xZckw2SmdMWjNzazVPX1B5dVZfdllYb3JlekFISHY4a0FBbEV6OHlqRWREeHNxY1BxMGROVGtFVWZ3SGVCN0sxenRBZFloc0laTFFTZnhuOWhPNDl4Mk1ueWR3d29hYzgxdmZMTk5lTjItejJIcGpHblVIT1FLS1dOVlFBUGIxUQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_7013a02a145186926d21abfaddd4d1ae.setContent(html_4fa638bc60f048b34512dfda32285b25);
+            
+        
+
+        marker_eef41922fb41023e8d3ce5ba9c7a3db7.bindPopup(popup_7013a02a145186926d21abfaddd4d1ae)
+        ;
+
+        
+    
+    
+                marker_eef41922fb41023e8d3ce5ba9c7a3db7.setIcon(icon_5beb68926df7a3ffbeddd069b9c83e5d);
+            
+    
+            var marker_da3c64c49269fe6a252ca556c0ecdfbc = L.marker(
+                [20.849957782216503, -89.7646997081664],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ed477f50ee0d7ce36254e3ab4df68779 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_168b5b62389e79b99327cd59ae2a3ad7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7aa5aa263221e6e86e3e62b9e9f0ada5 = $(`<div id="html_7aa5aa263221e6e86e3e62b9e9f0ada5" style="width: 100.0%; height: 100.0%;"><b>Umán</b><br>“El diablito” roba una batea en Umán, Yucatán - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMimAFBVV95cUxNbXYtM0Z6OGNvaWN2d0dKRTF3YktsLWdzZVNGNHhJaEd5TkNSMmRqRDJPS0ljTEw3cFVPU3pPZEd4OTVHRDBvekZ5UzhFS0oxY0ZfZFIwQUlQR2tOa2J4UHMtUjZqUkVSbWdIczJwOXQ2Q3NESDAzSTFtM2hSMjUwTm9ub3E1U2k4QXFET2xUWGZsdnBwM1JtaQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_168b5b62389e79b99327cd59ae2a3ad7.setContent(html_7aa5aa263221e6e86e3e62b9e9f0ada5);
+            
+        
+
+        marker_da3c64c49269fe6a252ca556c0ecdfbc.bindPopup(popup_168b5b62389e79b99327cd59ae2a3ad7)
+        ;
+
+        
+    
+    
+                marker_da3c64c49269fe6a252ca556c0ecdfbc.setIcon(icon_ed477f50ee0d7ce36254e3ab4df68779);
+            
+    
+            var marker_a63c28f10b2aa4282f2cd553deacbe74 = L.marker(
+                [20.96317581020639, -89.6253398208529],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_619697d76235ca6787219fa644ec6386 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fcc27de5d36c3706dec12876d841cc8b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f82db71eebf84972f0cc0e570bc7ba5 = $(`<div id="html_5f82db71eebf84972f0cc0e570bc7ba5" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Accidente en la Mérida-Umán: abandona su auto tras causar cuantiosos daños - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdGIzUHJzbWRsTlVNSDkzZldVdDlmbDBWVWxoMmFsYWpka1pva19wX1drRG9sdFljRW1zZTloa2dwUXJ0NzBacjhwNTlIMHFaWEFpRmp3djhMZXdzS1NTel9VSWlnZEhDNjI5Ym5EUEI2amlZaFdMZWIxRjA4alFxTkM1bmhCQ1FBV0lUWVhnWHdoVXd3QXYwS2dibm15ejhMS1haR0d3d0prTE5MTVdyLU9IVTZ0N2NOUC14RjNfcmU2UQ?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_fcc27de5d36c3706dec12876d841cc8b.setContent(html_5f82db71eebf84972f0cc0e570bc7ba5);
+            
+        
+
+        marker_a63c28f10b2aa4282f2cd553deacbe74.bindPopup(popup_fcc27de5d36c3706dec12876d841cc8b)
+        ;
+
+        
+    
+    
+                marker_a63c28f10b2aa4282f2cd553deacbe74.setIcon(icon_619697d76235ca6787219fa644ec6386);
+            
+    
+            var marker_8551b13af99016a8d53132149c376b3b = L.marker(
+                [21.24729981302879, -87.87140807816728],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_ee9875355aa80ccb0c31bdee33201fd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a843dbbdd00aa066a502c4dabd407ef7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b7670da6dc34d248bca58bc1c3931b8 = $(`<div id="html_3b7670da6dc34d248bca58bc1c3931b8" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Detienen a 72 personas durante operativo del “Buen Fin 2025” en Tizimín - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxNTGRpSldkZ20ta1FXd1BlbFhWVklKQ1pwLW9xRFNEUVlsbC1aOHBSRjBNeW1aZVYtdlkzRVR4VDFDMVJnTFR1MkFwZ0lfNmg4VjZFTXA0MVpvZmxFd1V4bVRBbi1PQWRNTnA1MXRrZnJVYk10NUhNTWxlXzR0dm5MSE5ibXNPUmNPNF9sVGNZczNFOUR6d3BtckJydUczTVNWYXhiQlJ1aWlrYVpyVVhKUDc0UkVEUEZyaExTTw?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_a843dbbdd00aa066a502c4dabd407ef7.setContent(html_3b7670da6dc34d248bca58bc1c3931b8);
+            
+        
+
+        marker_8551b13af99016a8d53132149c376b3b.bindPopup(popup_a843dbbdd00aa066a502c4dabd407ef7)
+        ;
+
+        
+    
+    
+                marker_8551b13af99016a8d53132149c376b3b.setIcon(icon_ee9875355aa80ccb0c31bdee33201fd9);
+            
+    
+            var marker_3e67e9aec39d3a14279f9a6c53f1906a = L.marker(
+                [20.84214021204855, -89.76718993511466],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_9eae6de3ca5964dbc22166c68cdbc0fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ce4adc6363f8f7351e59b7ed852472a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8b597438715b2f22f92fff1d5f2b6a9 = $(`<div id="html_b8b597438715b2f22f92fff1d5f2b6a9" style="width: 100.0%; height: 100.0%;"><b>Umán</b><br>Fatal accidente en Umán: motociclista choca con motocarro y fallece en el lugar - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWDZxRnR3Vzd1UXpoLTVQbkJIeGpEaUlCa3V1clhRSTFoZUxsaUVmV3h3RDJObHJOTVJKUTBsdlpMY1VWekw1dmVraWRUMEczWXdLOTlUdElyQTZpeDlWbUVpSGE3S0I0MFhNdk14Wi1rUXpLMXlhMncxWUpvajh1ejkxZm9uWWdOMEFtMnRoVnpaaDd0M09ITmwydTBRZk42Nk9DWGRHUUNBbElDR19sMlZkN0N0UEU2ZkxWOW9ZLXA5U1RpR21iTA?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_0ce4adc6363f8f7351e59b7ed852472a.setContent(html_b8b597438715b2f22f92fff1d5f2b6a9);
+            
+        
+
+        marker_3e67e9aec39d3a14279f9a6c53f1906a.bindPopup(popup_0ce4adc6363f8f7351e59b7ed852472a)
+        ;
+
+        
+    
+    
+                marker_3e67e9aec39d3a14279f9a6c53f1906a.setIcon(icon_9eae6de3ca5964dbc22166c68cdbc0fc);
+            
+    
+            var marker_18e0cb2d2d953f7b56b129f12df217b2 = L.marker(
+                [20.966006517561794, -89.62557440461879],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_a981c1f70e296953fb55472d642ec120 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7f5914ff82b7ffa912b50409e30a7e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b380e0347671556f3365c752a7a5d854 = $(`<div id="html_b380e0347671556f3365c752a7a5d854" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Otro camión del ”Va-y-Ven’ involucrado en un choque en Mérida; una mujer lesionada - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi0gFBVV95cUxQa1ZxRTBvaVp3WFY3QkR1R1VJTFo2UjBlX3E0bE5Ha3czRUZaTWw5T1dkX2VxQU9kT2N5OVkzMjUwc1FMaXlISnJzLTR6U0RJeVhXTnpVcFVwUjdwTC1Dc3lKMnBEc2NXVHJuMGNNeFJIbWI1ZE9GamRzMUF5d3h6YXM4b0FkdzJEY0tEeDVtTHhtZFNZOXBGUzZCLVM0S2NCLUtyYl82WDRRbHlYMmEwa2g1bmUxNWtlQXdpYm1fY1JGb0dCeVItbGkyQXRnNFJWdlE?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_e7f5914ff82b7ffa912b50409e30a7e8.setContent(html_b380e0347671556f3365c752a7a5d854);
+            
+        
+
+        marker_18e0cb2d2d953f7b56b129f12df217b2.bindPopup(popup_e7f5914ff82b7ffa912b50409e30a7e8)
+        ;
+
+        
+    
+    
+                marker_18e0cb2d2d953f7b56b129f12df217b2.setIcon(icon_a981c1f70e296953fb55472d642ec120);
+            
+    
+            var marker_a708183f58e4fd66a0822a847dbe3d18 = L.marker(
+                [21.24718616483617, -87.8728352878284],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_86adfb0eb15f337709d4e2d9b874fd14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a776deee3af2fe08b27c942331cc9186 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09edb7a810645f93cf67b98e2bbd95d0 = $(`<div id="html_09edb7a810645f93cf67b98e2bbd95d0" style="width: 100.0%; height: 100.0%;"><b>Tizimín</b><br>Antorchista y adulto mayor resultan lesionados en accidente en el tramo Tizimín-Calotmul - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMi1gFBVV95cUxObS1iZmFmazJVN1pCdkRSUW5XV2R3dm9BTTJhLWI5TTNaTDQ0Zm5KeUxhVHBVTHE2WWh0REpIbm05aE9TajdIRE5zeFhRejVzZlh4ZG5sOGVDWDVzTk15bGgweTRXZkF2YUc5bXlDZFhSaGlmZEFNWFZLcUlrd0NSNWtrSVR3TldQU2dRRmluZldQVGY3ZGRQU1FvaVNqam96S1RuTEI2ZENXQmJPWmJyVFZGMEczdGtqOUQ4aVE2OE9nSWtScHJqQUYyVjZuUXk0bUFTSFVn?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_a776deee3af2fe08b27c942331cc9186.setContent(html_09edb7a810645f93cf67b98e2bbd95d0);
+            
+        
+
+        marker_a708183f58e4fd66a0822a847dbe3d18.bindPopup(popup_a776deee3af2fe08b27c942331cc9186)
+        ;
+
+        
+    
+    
+                marker_a708183f58e4fd66a0822a847dbe3d18.setIcon(icon_86adfb0eb15f337709d4e2d9b874fd14);
+            
+    
+            var marker_26c8b2a362caa9eb070723b3cfd7a53d = L.marker(
+                [21.242444105910955, -89.68373355311908],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_4c7eb29c2b1bc197087ee0a61916d2de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_733e553310430d92fea67bafbab80c7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e92c0c92d3bfca47d7886b9e922a0c9d = $(`<div id="html_e92c0c92d3bfca47d7886b9e922a0c9d" style="width: 100.0%; height: 100.0%;"><b>Progreso</b><br>Desesperación para ingresar a Progreso - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2xsMll5dmV0LUtiNldYYUV1NzZ1ZUs4Tlg2QjItbHYwejAyQndncml3SzZkeFBKTVJhYkRpNnZtYWRFSUt5WlRadGlKZXJhNWVvc09ncHo4bTFlLWpJNzV2R1o3VUZwNGhlZkJNNjFsYkdWbDNiMjdybU5adnhXNk0yVWJpTkZXd0wzdS1aeFQ5bFE?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_733e553310430d92fea67bafbab80c7f.setContent(html_e92c0c92d3bfca47d7886b9e922a0c9d);
+            
+        
+
+        marker_26c8b2a362caa9eb070723b3cfd7a53d.bindPopup(popup_733e553310430d92fea67bafbab80c7f)
+        ;
+
+        
+    
+    
+                marker_26c8b2a362caa9eb070723b3cfd7a53d.setIcon(icon_4c7eb29c2b1bc197087ee0a61916d2de);
+            
+    
+            var marker_14fd756ef31da9e09b89a4dd6e545cfd = L.marker(
+                [20.97070888317652, -89.62267246860526],
+                {
+}
+            ).addTo(marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86);
+        
+    
+            var icon_b13f58830c17b16a6f7182247b3db494 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0ae34d978169326c72d178f439d195a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6d080521681516a22a6b9d8f8ba651e = $(`<div id="html_e6d080521681516a22a6b9d8f8ba651e" style="width: 100.0%; height: 100.0%;"><b>Mérida</b><br>Choque entre camión y auto causa caos vial en el fraccionamiento Brisas de Mérida - Diario de Yucatán<br><a href='https://news.google.com/rss/articles/CBMiywFBVV95cUxPeU4yTFFkM0h0SFNSdmRlZFhqVDhlV1VGeDNUUjJMN0JIMnRGdlRYUzY0N0lfVldoMkZobGw5NjIteHlLU2ctVTRxYTB1OVJpSjROdE9jeHlYVmh1WWtyM2I0R25nQlNRVlJ0N2FkWlNXWE1ERmk0cDZobEMtZVF3eW5OU2tULVdGbzdVWlI3eGZmZVhsUmN4b3hQZzl5emZBdHR0TEhsQUprX3U1NU5PSWRPUkIxbm02ei02ak03V29sZkppdUVoWE9VNA?oc=5' target='_blank'>Ver nota</a></div>`)[0];
+                popup_d0ae34d978169326c72d178f439d195a.setContent(html_e6d080521681516a22a6b9d8f8ba651e);
+            
+        
+
+        marker_14fd756ef31da9e09b89a4dd6e545cfd.bindPopup(popup_d0ae34d978169326c72d178f439d195a)
+        ;
+
+        
+    
+    
+                marker_14fd756ef31da9e09b89a4dd6e545cfd.setIcon(icon_b13f58830c17b16a6f7182247b3db494);
+            
+    
+            marker_cluster_c00b204c0d8913a0069c4f48f2ad5a86.addTo(map_c8f40b41f96f2f45709d4a2715c43567);
+        
+</script>
+</html>
